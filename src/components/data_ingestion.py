@@ -14,8 +14,7 @@ from src.logger import logging
 from src.exception import CustomException
 
 from src.components.data_transformation import DataTransformation
-
-#from src.component.modrl_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainer
 
 from dataclasses import dataclass
 from sklearn.model_selection import train_test_split
@@ -70,7 +69,7 @@ if __name__ =="__main__":
     data_transformation = DataTransformation()
     train_arr, test_arr, _ = data_transformation.inititate_data_transformation(train_data_path , test_data_path)
 
-    #modeltrainer = ModelTrainer()
-    #print(modeltrainer.inititate_model_trainer(train_arr, test_arr))
+    modeltrainer = ModelTrainer()
+    print(modeltrainer.inititate_model_trainer(train_arr, test_arr))
 
 # src\components\data_ingestion.py
